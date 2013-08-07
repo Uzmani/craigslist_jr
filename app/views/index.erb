@@ -1,8 +1,22 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>Welcome to Craigslist Jr.</h1>
+  <br>
+  <%= Category.all %>
+  <h3> Choose your Category! :) <h3>
+  <form action="/category" method="get">
+    <select name="category_select" > 
+      <option value="auto">Auto</option>
+      <option value="furniture">Furniture</option>
+      <option value="rentals">Rentals</option>
+      <input type="submit" value="Submit!">
+    </select>
+  </form>
+</div>
+  
 
-  <table>
+
+
+<!-- <table>
     <tr>
       <th>File Description</th>
       <th>File Location</th>
@@ -19,5 +33,4 @@
       <td>The current controller</td>
       <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
     </tr>
-  </table>
-</div>
+  </table> -->
